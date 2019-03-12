@@ -23,16 +23,6 @@ public class HealthyPerson extends Person {
 	}
 	
 	/**
-	 * Gets the reason for the HealthyPerson's hospital visit
-	 * 
-	 * @return reason
-	 */
-	private String getReason()
-	{
-		return reason;
-	}
-	
-	/**
 	 * Implementation method for Person's compareTo method(). Does the actual legwork of 
 	 * comparison to compare a HealthyPerson (self) vs. another Person (o).
 	 * 
@@ -65,7 +55,7 @@ public class HealthyPerson extends Person {
 	@Override
 	public String toString()
 	{
-		String output = String.format("%s In for %s", super.toString(), getReason());
+		String output = String.format("%s In for %s", super.toString(), reason);
 		return output;
 	}
 
