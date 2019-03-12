@@ -75,7 +75,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	/**
 	 * Gives a String for the hospital type.
 	 * 
-	 * @return A string exactly matching the class name.
+	 * @return type - A string exactly matching the class name.
 	 */
 	public String hospitalType()
 	{
