@@ -18,9 +18,29 @@ Tasks:
 11. Submit to the Web Cat and debug
 
 Estimated Time (minutes):
-1. 
+1. 20
+2. 20
+3. 20
+4. 10
+5. 10
+6. 30
+7. 15
+8. 15
+9. 10
+10. 10
+11. 20
 
 Actual Time (minutes):
 1. 
+2. 
+3. 
+4. 20
+5. 15
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
 
 */}

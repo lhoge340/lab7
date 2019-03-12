@@ -48,7 +48,7 @@ public class SickPerson extends Person {
 	 */
 	protected int compareToImpl(Person o)
 	{
-		if (o instanceof SickPerson)
+		if (!(o instanceof SickPerson))
 		{
 			return 0;
 		}
