@@ -34,6 +34,7 @@ public class HealthyPerson extends Person {
 	 * (3) names are equivalent: 0 i.e. the natural ordering of the name strings, ignoring case
 	 * Orders alphabetically.
 	 */
+	@Override
 	protected int compareToImpl(Person o)
 	{
 		if (!(o instanceof HealthyPerson))
@@ -42,7 +43,7 @@ public class HealthyPerson extends Person {
 		}
 		else
 		{	
-			return this.compareTo(o);
+			return this.getName().compareTo(o.getName());
 		}
 	}
 	

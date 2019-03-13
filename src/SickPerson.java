@@ -46,6 +46,7 @@ public class SickPerson extends Person {
 	 * (3) severity are equivalent: 0 
 	 * Orders by decreasing severity.
 	 */
+	@Override
 	protected int compareToImpl(Person o)
 	{
 		if (!(o instanceof SickPerson))
