@@ -14,7 +14,7 @@ import java.util.Stack;
  */
 public class StackHospital<PatientType> extends Hospital<PatientType> {
 
-	private Stack<PatientType> stackHospital;
+	private Stack<PatientType> stackHosp;
 	
 	private int numPatients;
 	
@@ -23,7 +23,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	 */
 	public StackHospital()
 	{
-		stackHospital = new Stack<PatientType>();
+		stackHosp = new Stack<PatientType>();
 		numPatients = 0;
 	}
 	
@@ -35,7 +35,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	@Override
 	public void addPatient(PatientType patient)
 	{
-		stackHospital.push(patient);
+		stackHosp.push(patient);
 		numPatients = numPatients + 1;
 	}
 	
@@ -49,7 +49,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	@Override
 	public PatientType nextPatient()
 	{
-		return stackHospital.peek();
+		return stackHosp.peek();
 	}
 	
 	/**
@@ -62,7 +62,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	public PatientType treatNextPatient()
 	{
 		numPatients = numPatients - 1;
-		return stackHospital.pop();
+		return stackHosp.pop();
 	}
 	
 	/**
@@ -96,7 +96,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	public String allPatientInfo()
 	{
 		Stack<PatientType> stackHospitalPrint = new Stack<PatientType>();
-		stackHospitalPrint = stackHospital;
+		stackHospitalPrint = stackHosp;
 		
 		String output = "";
 		

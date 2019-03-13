@@ -1,12 +1,10 @@
-import java.util.Stack;
-
 import org.junit.Assert;
 import org.junit.Test;
 
 /**
  * Lab 7
  *
- * Test class for SickPerson.
+ * Test class for StackHospital.
  *
  * @author Lynden
  * @version 2019-03-12
@@ -30,7 +28,7 @@ public class StackHospitalTest {
 	@Test
 	public void addPatientTest()
 	{
-		StackHospital s = new StackHospital<SickPerson>();
+		StackHospital<SickPerson> s = new StackHospital<SickPerson>();
 		SickPerson per1 = new SickPerson("John", 20, 7);
 		
 		s.addPatient(per1);
@@ -45,7 +43,7 @@ public class StackHospitalTest {
 	@Test
 	public void nextPatientTest()
 	{
-		StackHospital s = new StackHospital<SickPerson>();
+		StackHospital<SickPerson> s = new StackHospital<SickPerson>();
 		SickPerson per1 = new SickPerson("John", 20, 7);
 		
 		s.addPatient(per1);
@@ -101,6 +99,23 @@ public class StackHospitalTest {
 		
 		Assert.assertEquals("StackHospital allPatientInfo incorrect", expected, actual);
 
+	}
+	
+	/**
+	 * Tests the toString()
+	 */
+	@Test
+	public void toStringTest()
+	{
+		StackHospital<SickPerson> s = new StackHospital<SickPerson>();
+		SickPerson per1 = new SickPerson("John", 20, 7);
+		SickPerson per2 = new SickPerson("Nick", 21, 8);
+		
+		s.addPatient(per1);
+		s.addPatient(per2);
+		
+		String expected = "A StackHospital-type hospital with 2 patients";
+		String actual = s.toString();
 	}
 
 }

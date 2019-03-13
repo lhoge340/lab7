@@ -96,7 +96,7 @@ public class PriorityQueueHospital<PatientType> extends Hospital<PatientType> {
 		Queue<PatientType> priorityHospitalPrint = new PriorityQueue<PatientType>(200);
 		priorityHospitalPrint = priorityHospital;
 		
-		String output = null;
+		String output = "";
 		
 		while (!(priorityHospitalPrint.isEmpty()))
 		{

@@ -16,7 +16,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	
 	private int numPatients;
 	
-	private Queue<PatientType> queueHospital;
+	private Queue<PatientType> queueHosp;
 	
 	/**
 	 * Initializes the Patient Queue
@@ -24,7 +24,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	public QueueHospital()
 	{
 		numPatients = 0;
-		queueHospital = new LinkedList<PatientType>();
+		queueHosp = new LinkedList<PatientType>();
 	}
 	
 	/**
@@ -35,7 +35,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	@Override
 	public void addPatient(PatientType patient)
 	{
-		queueHospital.add(patient);
+		queueHosp.add(patient);
 		numPatients = numPatients + 1;
 	}
 	
@@ -48,7 +48,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	@Override
 	public PatientType nextPatient()
 	{
-		return queueHospital.peek();
+		return queueHosp.peek();
 	}
 	
 	/**
@@ -61,7 +61,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	public PatientType treatNextPatient()
 	{
 		numPatients = numPatients - 1;
-		return queueHospital.remove();
+		return queueHosp.remove();
 	}
 	
 	/**
@@ -95,13 +95,13 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	public String allPatientInfo()
 	{
 		Queue<PatientType> queueHospitalPrint = new LinkedList<PatientType>();
-		queueHospitalPrint = queueHospital;
+		queueHospitalPrint = queueHosp;
 		
-		String output = null;
+		String output = "";
 		
 		while (!(queueHospitalPrint.isEmpty()))
 		{
-			output = output + queueHospital.remove().toString();
+			output = output + queueHosp.remove().toString();
 		}
 		
 		return output;
