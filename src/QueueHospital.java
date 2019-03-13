@@ -32,6 +32,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @param patient - The patient to be added.
 	 */
+	@Override
 	public void addPatient(PatientType patient)
 	{
 		queueHospital.add(patient);
@@ -44,6 +45,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return The patient who would be next treated.
 	 */
+	@Override
 	public PatientType nextPatient()
 	{
 		return queueHospital.peek();
@@ -55,7 +57,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return The patient receiving treatment.
 	 */
-
+	@Override
 	public PatientType treatNextPatient()
 	{
 		numPatients = numPatients - 1;
@@ -67,6 +69,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return numPatients - The number of patients in the Hospital.
 	 */
+	@Override
 	public int numPatients()
 	{
 		return numPatients;
@@ -75,12 +78,12 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	/**
 	 * Gives a String for the hospital type.
 	 * 
-	 * @return type - A string exactly matching the class name.
+	 * @return A string exactly matching the class name.
 	 */
+	@Override
 	public String hospitalType()
 	{
-		String type = String.format("%s", queueHospital.getClass());
-		return type;
+		return "QueueHospital";
 	}
 	
 	/**
@@ -88,6 +91,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return The toString of all patients, concatenated (don't add spaces, newlines, etc...).
 	 */
+	@Override
 	public String allPatientInfo()
 	{
 		Queue<PatientType> queueHospitalPrint = new LinkedList<PatientType>();

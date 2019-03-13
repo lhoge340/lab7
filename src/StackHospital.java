@@ -32,6 +32,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @param patient - The patient to be added.
 	 */
+	@Override
 	public void addPatient(PatientType patient)
 	{
 		stackHospital.push(patient);
@@ -45,6 +46,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return The patient who would be next treated.
 	 */
+	@Override
 	public PatientType nextPatient()
 	{
 		return stackHospital.peek();
@@ -56,6 +58,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return The patient receiving treatment.
 	 */
+	@Override
 	public PatientType treatNextPatient()
 	{
 		numPatients = numPatients - 1;
@@ -67,6 +70,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return numPatients - The number of patients in the Hospital.
 	 */
+	@Override
 	public int numPatients()
 	{
 		return numPatients;
@@ -77,10 +81,10 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return type - A string exactly matching the class name.
 	 */
+	@Override
 	public String hospitalType()
 	{
-		String type = String.format("%s", stackHospital.getClass());
-		return type;
+		return "StackHospital";
 	}
 	
 	/**
@@ -88,6 +92,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	 * 
 	 * @return The toString of all patients, concatenated (don't add spaces, newlines, etc...).
 	 */
+	@Override
 	public String allPatientInfo()
 	{
 		Stack<PatientType> stackHospitalPrint = new Stack<PatientType>();
