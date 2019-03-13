@@ -98,11 +98,12 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 		Stack<PatientType> stackHospitalPrint = new Stack<PatientType>();
 		stackHospitalPrint = stackHospital;
 		
-		String output = null;
+		String output = "";
 		
-		while (!(stackHospitalPrint.isEmpty()))
+		while (numPatients != 0)
 		{
 			output = output + stackHospitalPrint.pop().toString();
+			numPatients = numPatients - 1;
 		}
 		
 		return output;
